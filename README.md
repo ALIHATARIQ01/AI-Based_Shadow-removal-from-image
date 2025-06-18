@@ -1,4 +1,3 @@
-
 # 🖼️ AI-Based Shadow Removal from Images
 
 This project is focused on removing shadows from natural images using computer vision techniques. It uses manual K-Means clustering, adaptive morphological filtering, and inpainting, achieving an **average SSIM score of over 80%** on the test set.
