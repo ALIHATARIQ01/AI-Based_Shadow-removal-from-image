@@ -1,3 +1,4 @@
+
 # 🖼️ AI-Based Shadow Removal from Images
 
 This project is focused on removing shadows from natural images using computer vision techniques. It uses manual K-Means clustering, adaptive morphological filtering, and inpainting, achieving an **average SSIM score of over 80%** on the test set.
@@ -6,14 +7,19 @@ This project is focused on removing shadows from natural images using computer v
 
 ## 📁 Project Structure
 
+```
+
 .
-├── dataset/ # Input shadow images
-├── images_preprocessed/ # Preprocessed images (auto-generated)
-├── result/ # Output: original, mask, shadow-removed images
-├── preprocessing.py # Preprocessing and cross-correlation analysis
-├── test.py # Shadow mask generation, removal, evaluation
-├── cross_correlation_heatmap.jpg
-├── mean_intensity_boxplot.jpg
+├── dataset/                  # Input shadow images
+├── images\_preprocessed/     # Preprocessed images (auto-generated)
+├── result/                  # Output: original, mask, shadow-removed images
+├── preprocessing.py         # Preprocessing and cross-correlation analysis
+├── test.py                  # Shadow mask generation, removal, evaluation
+├── cross\_correlation\_heatmap.jpg
+├── mean\_intensity\_boxplot.jpg
+
+````
+
 ---
 
 ## ✨ Features
@@ -37,50 +43,69 @@ The system effectively removes shadows while preserving important image features
 ## ⚙️ How to Run
 
 ### Step 1: Preprocess the Images
+
 ```bash
 python preprocessing.py
+````
+
 ### Step 2: Run Shadow Removal and Evaluation
+
+```bash
 python test.py
-The results (original, mask, and shadow-free output) will be saved in the result/ folder.
+```
+
+The results (original, mask, and shadow-free output) will be saved in the `result/` folder.
+
+---
+
 ## 🔍 Techniques Used
-HSV Color Space Conversion
 
-Manual K-Means Clustering (k=3)
+* HSV Color Space Conversion
+* Manual K-Means Clustering (`k=3`)
+* Morphological Operations (Erosion, Dilation)
+* Shadow Region Inpainting (`cv2.inpaint`)
+* SSIM-based Evaluation
+* Cross-Correlation Matrix
+* Statistical Boxplot Drawing in OpenCV
 
-Morphological Operations (Erosion, Dilation)
-
-Shadow Region Inpainting (cv2.inpaint)
-
-SSIM-based Evaluation
-
-Cross-Correlation Matrix
-
-Statistical Boxplot Drawing in OpenCV
+---
 
 ## 🖥️ Sample Output
-Each output image in result/ includes:
 
-Original Image
+Each output image in the `result/` folder includes:
 
-Detected Shadow Mask
+* Original Image
+* Detected Shadow Mask
+* Shadow-Removed Result
 
-Shadow-Removed Result
-## Requirements
-Python 3.x
+---
 
-OpenCV
+## 📦 Requirements
 
-NumPy
+* Python 3.x
+* OpenCV
+* NumPy
 
-## Install dependencies:
+### Install dependencies:
+
+```bash
 pip install opencv-python numpy
+```
+
+---
+
 ## 🚀 Future Improvements
-Use of Deep Learning models like U-Net or GANs
 
-Deployment as a Web Application or API
+* Use of Deep Learning models like U-Net or GANs
+* Deployment as a Web Application or API
+* Real-time shadow detection and removal for video
 
-Real-time shadow detection and removal for video
+---
 
-👩‍💻 Author
-# Aliha Tariq
-# Computer Science Enthusiast | Passionate about AI & Image Processing
+## 👩‍💻 Author
+
+### Aliha Tariq
+
+Computer Science Enthusiast | Passionate about AI & Image Processing
+🔗 [GitHub](https://github.com/ALIHATARIQ01)
+
