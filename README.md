@@ -33,7 +33,7 @@ This project is focused on removing shadows from natural images using computer v
 
 ## 🎯 Accuracy
 
-> ✅ **Average SSIM Score (Test Set): ~0.82**
+> ✅ **Average SSIM Score (Test Set): 82%**
 
 The system effectively removes shadows while preserving important image features.
 
